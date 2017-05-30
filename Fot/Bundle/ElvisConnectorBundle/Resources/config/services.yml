@@ -1,0 +1,8 @@
+parameters:
+    fot.elvisconnector.provider.field.ElvisAssetCollection.class: Fot\Bundle\ElvisConnectorBundle\Enrich\Provider\Field\ElvisAssetCollectionFieldProvider
+
+services:
+    fot.elvisconnector.provider.field.ElvisAssetCollection:
+        class: '%fot.elvisconnector.provider.field.ElvisAssetCollection.class%'
+        tags:
+            - { name: pim_enrich.provider.field, priority: 90 }

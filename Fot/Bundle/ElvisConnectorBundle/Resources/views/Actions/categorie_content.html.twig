@@ -1,0 +1,9 @@
+{% block content %}
+
+    {% for hit in result.hits %}
+        {% if hit.thumbnailUrl is defined %}
+                <div id="{{ hit.id }}"  width="80px"  draggable="true" ondragstart="drag(event)"><img id="{{ hit.id }}" width="80px" src="{{ hit.thumbnailUrl }}&authcred={{result.cred}}"/></div>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}

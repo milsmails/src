@@ -1,0 +1,2 @@
+parameters:
+    elvis_connector.model.elvis_collection.class:              Fot\Component\ElvisConnector\Model\ElvisCollectionInterface

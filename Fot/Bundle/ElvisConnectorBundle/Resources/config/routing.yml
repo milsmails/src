@@ -1,0 +1,3 @@
+elvis_connector_index:
+    path:     /elvis
+    defaults: { _controller: FotElvisConnectorBundle:Actions:index }

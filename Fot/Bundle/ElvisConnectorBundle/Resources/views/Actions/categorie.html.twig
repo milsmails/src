@@ -1,0 +1,15 @@
+{% block content %}
+
+    {% for hit in result %}
+
+        {% if hit is defined %}
+            <div id="{{ hit.assetPath | replace({'/' : ''}) }}" >
+            <a onclick="getElvisCategories('{{ hit.assetPath }}')">{{ hit.name }}</a>
+            <div id="{{ hit.assetPath | replace({'/' : ''}) }}_content">
+            </div>
+            </div>
+
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}

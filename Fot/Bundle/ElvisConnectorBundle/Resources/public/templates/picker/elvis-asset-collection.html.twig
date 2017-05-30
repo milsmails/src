@@ -1,0 +1,65 @@
+    <div class="AknFieldContainer-inputContainer field-input">
+        <div class="AknAssetCollectionField"><div class="AknAssetCollectionField-header AknButtonList AknButtonList--right ">
+    <span class="AknButtonList-item AknButton AknButton--apply AknButton--withIcon add-asset" href="#popupFormConsulter"
+          role="button" data-toggle="modal" onclick="$('#elvisAssetDrag').html($('#elvisAssetCollection').html()).show();">
+        <i class="AknButton-icon icon-ok"  ></i>
+        Gérer les ressources
+    </span>
+        </div>
+            <div  id="elvisAssetCollection" style="display: inline-flex;flex-wrap: wrap;">
+
+
+
+            </div>
+
+        </div></div>
+    <footer>
+        <div class="AknFieldContainer-footer footer-elements-container">
+
+        </div>
+    </footer>
+</div>
+    <div class="AknComparableFields-item AknComparableFields-item--comparisonContainer AknFieldContainer comparison-elements-container"></div>
+
+
+    <div id="popupFormConsulter" class="modal hide fade modal-large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="popupLabel">Elvis assets</h3>
+        </div class="modal-header">
+        <div class="modal-body" id="elvis-assests">
+
+        </div class="modal-body">
+        <script type="text/javascript">
+
+            var idattrib = $(".akeneo-elvis-asset-collection-field").parent().prop("id");
+            var idprod = ((($(location).attr('href').split('product/'))[1]).split('?'))[0].match(/\d+/);
+            $.ajax({
+                type: 'POST',
+                url: "<%- Routing.generate('elvis_connector_assets_product', {}) %>",
+                data: "idprod=" + idprod + "&idattrib=" + idattrib,
+                datatype: "html",
+                success: function (data) {
+                    $('#elvisAssetCollection').html(data).show();
+
+                }
+
+            });
+
+
+            $.ajax({
+                type: 'POST',
+                url: "<%- Routing.generate('elvis_connector_index', {}) %>",
+                data: "",
+                datatype: "html",
+                success: function (data) {
+                    $('#elvis-assests').html(data).show();
+                },
+
+            }).done(function() {
+                $('#elvisAssetDrag').html($('#elvisAssetCollection').html()).show();
+            });
+
+        </script>
+
+    </div id="popupFormConsulter">

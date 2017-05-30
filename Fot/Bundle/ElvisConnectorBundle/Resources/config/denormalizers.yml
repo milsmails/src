@@ -1,0 +1,8 @@
+services:
+    fot_elvis_connector.denormalizer.fot_elvis_assets_collection:
+        class: '%pim_reference_data.denormalizer.reference_data_collection.class%'
+        arguments:
+            - ['fot_elvis_assets_collection']
+            - '@pim_reference_data.denormalizer.reference_data'
+        tags:
+            - { name: pim_serializer.normalizer, priority: 90 }

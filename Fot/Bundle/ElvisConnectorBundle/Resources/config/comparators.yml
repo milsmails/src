@@ -1,0 +1,9 @@
+parameters:
+    elvis_connector.comparator.attribute.elvis_collection.class:    Fot\Bundle\ElvisConnectorBundle\Comparator\Attribute\ElvisCollectionComparator
+services:
+    elvis_connector.comparator.attribute.elvis_collection:
+        class: '%elvis_connector.comparator.attribute.elvis_collection.class%'
+        arguments:
+            - ['fot_elvis_assets_collection', '']
+        tags:
+            - { name: pim_catalog.attribute.comparator }

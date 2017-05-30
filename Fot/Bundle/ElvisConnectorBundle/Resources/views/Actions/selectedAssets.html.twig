@@ -1,0 +1,14 @@
+{% block content %}
+    {% for result in results %}
+        {% for hit in result.hits %}
+            {% if hit.thumbnailUrl is defined %}
+                <div id="{{ hit.id }}" class="AknAssetCollectionField-assetThumbnail" width="80px">
+                    <img id="{{ hit.id }}" width="80px" src="{{ hit.thumbnailUrl }}&authcred={{ result.cred }}"/>
+                    <div class= "removeAsset" id="{{ hit.id }}" >X</div>
+                </div>
+
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
+

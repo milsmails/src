@@ -1,0 +1,12 @@
+parameters:
+     fot_elvis_connector.attribute_type.elvis_asset_collection.class: Fot\Bundle\ElvisConnectorBundle\AttributeType\ElvisAssetCollectionType
+services:
+    fot.elvisconnector.attributetype.elvisassetcollection:
+        class: '%fot_elvis_connector.attribute_type.elvis_asset_collection.class%'
+        arguments:
+            - reference_data_options
+            - fot_elvis_assets_collection
+            - '@pim_catalog.validator.constraint_guesser.chained_attribute'
+            - '@pim_reference_data.registry'
+        tags:
+            - { name: pim_catalog.attribute_type, alias: fot_elvis_assets_collection }
