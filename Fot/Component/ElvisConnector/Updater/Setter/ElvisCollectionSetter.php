@@ -29,7 +29,7 @@ class ElvisCollectionSetter extends  TextAttributeSetter {
     )
     {
         $options = $this->resolver->resolve($options);
-       // $this->checkLocaleAndScope($attribute, $options['locale'], $options['scope']);
+        $this->checkLocaleAndScope($attribute, $options['locale'], $options['scope']);
         $this->checkData($attribute, $data);
 
         $this->setData($product, $attribute, $data, $options['locale'], $options['scope']);

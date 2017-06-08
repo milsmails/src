@@ -10,7 +10,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 /**
  * This is the class that loads and manages your bundle configuration
  *
- * @author Marie Bochu <marie.bochu@akeneo.com>
+ * @author Mils Mails <milsmails@gmail.com>
  */
 class FotElvisConnectorExtension extends Extension
 {
@@ -28,7 +28,7 @@ class FotElvisConnectorExtension extends Extension
         $loader->load('comparators.yml');
         $loader->load('savers.yml');
         $loader->load('updaters.yml');
-        $loader->load('factories.yml');
-        $loader->load('models.yml');
+//        $loader->load('factories.yml');
+//        $loader->load('models.yml');
     }
 }

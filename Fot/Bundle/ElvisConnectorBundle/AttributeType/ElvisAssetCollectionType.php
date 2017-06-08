@@ -51,7 +51,7 @@ class ElvisAssetCollectionType extends AbstractAttributeType
                     'name'      => 'reference_data_name',
                     'fieldType' => 'hidden',
                     'options'   => [
-                        'data' => 'elvis-assets',
+                        'data' =>'text',
                     ],
                 ],
                 'scopable' => [
