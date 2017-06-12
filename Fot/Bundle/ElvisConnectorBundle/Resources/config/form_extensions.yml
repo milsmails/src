@@ -1,2 +1,8 @@
+extensions:
+    fot-elvis-system-configuration:
+        module: fot/elvisconnector/system/configuration
+        parent: oro-system-config-system
+        targetZone: content
+        position: 130
 attribute_fields:
     fot-elvis-asset-collection-field: fot/elvis-asset-collection-field

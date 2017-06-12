@@ -6,3 +6,11 @@ services:
         class: '%fot.elvisconnector.provider.field.ElvisAssetCollection.class%'
         tags:
             - { name: pim_enrich.provider.field, priority: 90 }
+    fot.elvis:
+        class: 'Fot\Bundle\ElvisConnectorBundle\Elvis'
+        arguments:
+            - '@oro_config.global'
+            - '@router'
+            - '@pim_serializer'
+            - '@kernel'
+            - '@logger'

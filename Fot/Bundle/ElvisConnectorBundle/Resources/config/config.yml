@@ -1,0 +1,12 @@
+pim_fot_bundle_elvisconnector:
+    settings:
+        base_url:
+            value: ~
+            scope: app
+        username:
+            value: ~
+            scope: app
+        pwd:
+            value: ~
+            scope: app
+
