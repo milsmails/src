@@ -1,9 +1,0 @@
-parameters:
-    elvis_connector.comparator.saver.elvis_collection.class:         Fot\Bundle\ElvisConnectorBundle\Doctrine\Common\Saver\ElvisCollectionSaver
-services:
-    elvis_connector.comparator.saver.elvis_collection:
-        class: '%elvis_connector.comparator.saver.elvis_collection.class%'
-        arguments:
-            - '@doctrine.orm.entity_manager'
-            - '@event_dispatcher'
-#           - '@pim_catalog.doctrine.completeness_generator'

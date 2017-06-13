@@ -1,6 +1,0 @@
-config:
-    paths:
-        fot/elvis-asset-collection-field: fotelvisconnector/js/product/field/fot-elvis-assets-collection
-        fot/template/product/field/elvis-asset-collection: fotelvisconnector/templates/product/field/fot-elvis-assets-collection.html
-        fot/elvisconnector/system/configuration: fotelvisconnector/js/form/system
-        fot/elvisconnector/templates/system/group/configuration: fotelvisconnector/templates/system/group/configuration.html
