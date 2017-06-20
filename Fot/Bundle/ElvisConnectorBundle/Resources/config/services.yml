@@ -1,0 +1,22 @@
+parameters:
+    fot.elvisconnector.provider.field.ElvisAssetCollection.class: Fot\Bundle\ElvisConnectorBundle\Enrich\Provider\Field\ElvisAssetCollectionFieldProvider
+
+services:
+    fot.elvisconnector.provider.field.ElvisAssetCollection:
+        class: '%fot.elvisconnector.provider.field.ElvisAssetCollection.class%'
+        tags:
+            - { name: pim_enrich.provider.field, priority: 90 }
+    fot.elvis:
+        class: 'Fot\Bundle\ElvisConnectorBundle\Elvis'
+        arguments:
+            - '@oro_config.global'
+            - '@router'
+            - '@pim_serializer'
+            - '@kernel'
+            - '@logger'
+
+    ElvisConnector.Curl:
+        class: Fot\Bundle\ElvisConnectorBundle\Curl\Curl
+        arguments: ["172.27.63.140:8080", "admin", "perigee"]
+        tags:
+            -  { name: twig.extension }

@@ -1,0 +1,21 @@
+fotelvis:
+  asset management:
+    title: tessa™ Asset Management
+    confirm: Save
+    cancel: Cancel
+    asset: Asset
+    assets: Assets
+    choosen: ausgewählt
+  configuration:
+    base_url:
+      label: Base URL
+    username:
+      label: Username
+    pwd:
+      label: Password
+    systemidentifier:
+      label: tessa™ System Key
+    tab:
+      label: tessa™
+    link:
+      label: Fot Elvis Connector

@@ -1,0 +1,10 @@
+parameters:
+    elvis_connector.updater.elvis_collection.class:                                 Fot\Component\ElvisConnector\Updater\Setter\ElvisCollectionSetter
+services:
+    elvis_connector.updater.elvis_collection:
+        class: '%elvis_connector.updater.elvis_collection.class%'
+        parent: pim_catalog.updater.setter.abstract
+        arguments:
+            - ['pim_catalog_text', 'fot_elvis_assets_collection']
+        tags:
+            - { name: 'pim_catalog.updater.setter' }

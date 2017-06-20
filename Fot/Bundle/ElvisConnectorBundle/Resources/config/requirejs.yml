@@ -1,0 +1,18 @@
+config:
+    paths:
+        #Field
+        fot/elvis-asset-collection-field: fotelvisconnector/js/product/field/elvis-asset-collection-field
+        #Views
+        fot/elvisconnector/form/system: fotelvisconnector/js/form/system
+        fot/elvisconnector/elvis-asset-selection-form: fotelvisconnector/js/form/fot-elvis-asset-selection
+        fot/elvisconnector/elvis-asset-collection: fotelvisconnector/js/picker/elvis-asset-collection
+        #Templates
+        fot/template/picker/elvis-asset-collection: fotelvisconnector/templates/picker/elvis-asset-collection.html
+        fot/template/picker/elvis-asset-grid: fotelvisconnector/templates/picker/elvis-asset-grid.html
+        fot/template/picker/elvis-basket: fotelvisconnector/templates/picker/elvis-basket.html
+        fot/elvisconnector/configuration: fotelvisconnector/templates/system/group/configuration.html
+        #Extensions
+        fotelvisconnector/js/picker/elvis-asset-grid: fotelvisconnector/js/picker/elvis-asset-grid
+        fotelvisconnector/js/picker/elvis-jstree: fotelvisconnector/js/picker/elvis-jstree
+        fotelvisconnector/js/picker/elvis_category-filter: fotelvisconnector/js/picker/elvis_category-filter
+        fosRoute: ../js/fos_js_routes
